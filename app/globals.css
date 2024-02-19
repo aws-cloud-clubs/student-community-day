@@ -148,3 +148,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2.5s infinite;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}

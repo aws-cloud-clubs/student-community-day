@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import React from "react";
 
+import { defaultMetadata } from "@/app/shared-metadata";
+
 export const metadata: Metadata = {
-  title: "ACC SCD 2024",
-  description: "ACC Student Community Day 2024",
+  ...defaultMetadata,
 };
 
 export default function RootLayout({
