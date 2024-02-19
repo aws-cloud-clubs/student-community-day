@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ko'>
+    <html lang='en'>
       <head>
         <link rel='apple-touch-icon' sizes='57x57' href='/icons/apple-icon-57x57.png' />
         <link rel='apple-touch-icon' sizes='60x60' href='/icons/apple-icon-60x60.png' />
@@ -36,7 +36,7 @@ export default function RootLayout({
         <meta name='theme-color' content='#ffffff' />
       </head>
 
-      <body className='font-Pretendard'>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

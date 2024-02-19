@@ -4,34 +4,28 @@ import React from "react";
 
 import { ArrowTopRightOnSquareIcon, Bars3Icon } from "@heroicons/react/24/solid";
 
-const Header: React.FC = () => {
-  const scrollObserver = new IntersectionObserver(
-    (entries) => {
-      // if hero section is displayed, change the header text color to white
-      // if program section is top, change the header text color to black
-      if (entries[0].isIntersecting) {
-        document.querySelector("header")?.classList.add("text-black");
-        document.querySelector("header")?.classList.remove("text-white");
-      } else {
-        document.querySelector("header")?.classList.add("text-white");
-        document.querySelector("header")?.classList.remove("text-black");
-      }
-    },
-    {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1,
-    },
-  );
-
+export const Header: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    const programSection = document.getElementById("program");
-    if (programSection) {
-      scrollObserver.observe(programSection);
-    }
+    const heroSection = document.getElementById("hero");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          document.querySelector("header")?.classList.add("text-white");
+          document.querySelector("header")?.classList.remove("text-black");
+        } else {
+          document.querySelector("header")?.classList.remove("text-white");
+          document.querySelector("header")?.classList.add("text-black");
+        }
+      },
+      { threshold: 0.05 },
+    );
+
+    if (heroSection) observer.observe(heroSection);
+
     return () => {
-      scrollObserver.disconnect();
+      if (heroSection) observer.unobserve(heroSection);
     };
   }, []);
 
@@ -44,7 +38,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className='w-full flex justify-center fixed top-px shadow-md z-10 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
+    <header className='w-full flex justify-center fixed top-0 shadow-md z-10 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
       <div className='max-w-[1440px] w-full h-14 flex justify-between items-center px-5'>
         <b className='cursor-pointer' onClick={scrollToSection("top")}>
           ACC SCD 2024
@@ -79,5 +73,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;

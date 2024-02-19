@@ -1,13 +1,16 @@
 import React from "react";
 
-import { Header, HeroSection, ProgramSection } from "@/components";
+import { Header } from "@/components";
+import { HeroSection, ProgramSection } from "@/containers";
 
 export default function CommunityDay2024() {
   return (
-    <main className='min-w-screen min-h-screen relative'>
+    <main className='w-screen min-h-screen relative flex flex-col items-center'>
       <Header />
       <HeroSection />
-      <ProgramSection />
+      <div className='max-w-[1440px] flex flex-col w-full'>
+        <ProgramSection />
+      </div>
     </main>
   );
 }
