@@ -33,7 +33,10 @@ export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, desc
     };
   }, [itemRef]);
   return (
-    <div className='w-full flex py-5 justify-between min-h-[150px] gap-x-20' ref={itemRef}>
+    <div
+      className='w-full flex py-5 justify-between min-h-[150px] gap-x-20 max-md:flex-col max-md:gap-y-2'
+      ref={itemRef}
+    >
       <div className='flex flex-col border-b border-b-gray-900 flex-1'>
         <span className='text-xs font-medium'>{`${startAt} ~ ${endAt}`}</span>
         <span className='text-lg font-bold'>{title}</span>

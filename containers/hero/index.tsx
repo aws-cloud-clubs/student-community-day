@@ -3,7 +3,7 @@ import React from "react";
 
 export const HeroSection: React.FC = () => {
   return (
-    <div id='hero' className='w-screen h-screen flex relative'>
+    <div id='hero' className='w-screen flex relative'>
       <Image
         src='/assets/images/hero-object.png'
         alt='animation object'
