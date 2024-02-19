@@ -21,7 +21,7 @@ export const ProgramSection: React.FC = () => {
           <ProgramListItem {...program} key={program.title} />
         ))}
       </div>
-      <b className='text-4xl max-md text-2xl'>Track 2 : 데브옵스</b>
+      <b className='text-4xl max-md max-md:text-2xl'>Track 2 : 데브옵스</b>
       <div className='flex flex-col gap-y-5'>
         {TRACK_2.map((program, idx) => (
           <ProgramListItem {...program} key={program.title} />
