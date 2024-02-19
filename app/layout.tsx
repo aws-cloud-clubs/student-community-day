@@ -35,6 +35,7 @@ export default function RootLayout({
         <meta name='msapplication-TileImage' content='/icons/ms-icon-144x144.png' />
         <meta name='theme-color' content='#ffffff' />
       </head>
+
       <body className='font-Pretendard'>{children}</body>
     </html>
   );

@@ -6,7 +6,7 @@ const nextConfig = {
         source: '/',
         destination: '/2024',
         permanent: true
-      }
+      },
     ]
   }
 };

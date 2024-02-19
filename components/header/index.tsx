@@ -1,22 +1,70 @@
+"use client";
+
 import React from "react";
 
 import { ArrowTopRightOnSquareIcon, Bars3Icon } from "@heroicons/react/24/solid";
 
 const Header: React.FC = () => {
+  const scrollObserver = new IntersectionObserver(
+    (entries) => {
+      // if hero section is displayed, change the header text color to white
+      // if program section is top, change the header text color to black
+      if (entries[0].isIntersecting) {
+        document.querySelector("header")?.classList.add("text-black");
+        document.querySelector("header")?.classList.remove("text-white");
+      } else {
+        document.querySelector("header")?.classList.add("text-white");
+        document.querySelector("header")?.classList.remove("text-black");
+      }
+    },
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1,
+    },
+  );
+
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    const programSection = document.getElementById("program");
+    if (programSection) {
+      scrollObserver.observe(programSection);
+    }
+    return () => {
+      scrollObserver.disconnect();
+    };
+  }, []);
+
+  const scrollToSection = (section: string) => () => {
+    if (section === "top") return window.scrollTo(0, 0);
+    const el = document.getElementById(section);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header className='w-full flex justify-center fixed top-px shadow-md z-10 bg-white'>
-      <div className='max-w-[1440px] w-full h-14 flex justify-between items-center max-md:px-5'>
-        <b>ACC SCD 2024</b>
+    <header className='w-full flex justify-center fixed top-px shadow-md z-10 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
+      <div className='max-w-[1440px] w-full h-14 flex justify-between items-center px-5'>
+        <b className='cursor-pointer' onClick={scrollToSection("top")}>
+          ACC SCD 2024
+        </b>
         <nav className='max-md:hidden'>
           <ul className='flex space-x-10 text-md font-medium'>
             <li>
-              <a href='#'>발표/프로그램</a>
+              <a href='#program' onClick={scrollToSection("program")}>
+                발표/프로그램
+              </a>
             </li>
             <li>
-              <a href='#'>위치</a>
+              <a href='#location' onClick={scrollToSection("location")}>
+                위치
+              </a>
             </li>
             <li>
-              <a href='#'>이벤트</a>
+              <a href='#event' onClick={scrollToSection("event")}>
+                이벤트
+              </a>
             </li>
           </ul>
         </nav>
