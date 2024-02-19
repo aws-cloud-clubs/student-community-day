@@ -22,6 +22,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Cache Node Modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.bun }}-bun-
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
