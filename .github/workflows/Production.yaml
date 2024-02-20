@@ -8,7 +8,7 @@ on:
     types: [released]
 permissions: read-all # This is required to read the secrets
 jobs:
-  deploy-production:
+  Amplify-Deploy-With-Webhook:
     runs-on: ubuntu-latest
     permissions: read-all # This is required to read the secrets
     steps:
