@@ -2,36 +2,12 @@
 
 import React from "react";
 
+import { useAnimation } from "@/hooks";
 import { Program } from "@/types";
 
 export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, description, level, presenter }) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    if (typeof window === "undefined" || !itemRef.current) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate-slideInFromLeft");
-        }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      },
-    );
-
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
-    }
-
-    return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
-      }
-    };
-  }, [itemRef]);
+  useAnimation({ refs: itemRef, animationClassName: "animate-slideInFromLeft" });
   return (
     <div
       className='w-full flex py-5 justify-between min-h-[150px] gap-x-20 max-md:flex-col max-md:gap-y-2'

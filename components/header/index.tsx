@@ -25,7 +25,11 @@ export const Header: React.FC = () => {
   }, []);
 
   const scrollToSection = (section: string) => () => {
-    if (section === "top") return window.scrollTo(0, 0);
+    if (section === "top") {
+      window.scrollTo(0, 0);
+      window.history.pushState({}, "", "/2024");
+      return;
+    }
     const el = document.getElementById(section);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
