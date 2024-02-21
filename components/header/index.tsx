@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className='w-full flex justify-center fixed top-0 z-50 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
+    <header className='w-full flex justify-center fixed top-0 z-50 bg-white bg-opacity-30 backdrop-blur-sm transition-colors duration-500'>
       <div className='max-w-[1440px] w-full h-14 flex justify-between items-center px-5'>
         <b className='cursor-pointer' onClick={scrollToSection("top")}>
           ACC SCD 2024
