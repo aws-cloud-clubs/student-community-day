@@ -11,7 +11,6 @@ export const HeroSection: React.FC = () => {
         height={1080}
         className='absolute top-0 left-0 z-0 w-screen h-full z-1 animate-bounce object-cover'
       />
-      {/* MEMO Typo bg image에서 분리하기*/}
       <Image
         priority
         src={"/assets/images/background.png"}

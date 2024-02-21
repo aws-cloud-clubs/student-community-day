@@ -5,7 +5,7 @@ export const LocationSection: React.FC = () => {
   return (
     <div
       id='location'
-      className='w-full h-full flex items-center bg-white px-10 py-40 gap-y-10 max-md:py-10 max-md:gap-y-5 justify-center gap-x-20 max-md:flex-col'
+      className='w-full h-full min-h-screen flex items-center bg-white px-10 py-40 gap-y-10 max-md:py-10 max-md:gap-y-5 justify-center gap-x-20 max-md:flex-col'
     >
       <div className='flex flex-col max-md:items-center max-md:gap-x-2.5'>
         <div className='flex flex-col max-md:mb-5'>
@@ -21,10 +21,10 @@ export const LocationSection: React.FC = () => {
           <span>길찾기</span>
         </a>
       </div>
-      <div className='flex justify-center items-center rounded-5xl overflow-hidden'>
+      <div className='flex justify-center items-center'>
         <a href='https://kko.to/DFNgReJc7O' target='_blank'>
           <img
-            className='w-[504px] h-[310px] '
+            className='w-[504px] h-[310px] rounded-3xl '
             src='https://map2.daum.net/map/mapservice?FORMAT=PNG&amp;SCALE=2.5&amp;MX=509203&amp;MY=1112253&amp;S=0&amp;IW=504&amp;IH=310&amp;LANG=0&amp;COORDSTM=WCONGNAMUL&amp;logo=kakao_logo'
           />
         </a>

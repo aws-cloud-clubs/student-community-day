@@ -7,11 +7,15 @@ export default function CommunityDay2024() {
   return (
     <main className='w-screen min-h-screen relative flex flex-col items-center'>
       <Header />
-      <HeroSection />
-      <div className='max-w-[1440px] flex flex-col w-full'>
-        <ProgramSection />
-        <LocationSection />
-        <EventSection />
+      <div className='sticky top-0'>
+        <HeroSection />
+      </div>
+      <div className='w-screen bg-white z-10 flex justify-center'>
+        <div className='max-w-[1440px] flex flex-col w-full z-10'>
+          <ProgramSection />
+          <LocationSection />
+          <EventSection />
+        </div>
       </div>
     </main>
   );

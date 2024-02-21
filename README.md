@@ -2,11 +2,7 @@
 ### Student Community Day Event Page
 > 이 레포는 Community Day Event를 위한 레포입니다.
  
-URL : https://main.d343t49ramvyri.amplifyapp.com
-### Secure
-완성되기 전 까지는 ID/PW를 입력해야 접근이 가능합니다.
-ID - admin
-PW - sudosubin
+URL : https://main.d343t49ramvyri.amplifyapp.com 
 
 ### Architecture
 - Node.js >= 18.17.0

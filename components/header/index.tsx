@@ -7,26 +7,21 @@ import { ArrowTopRightOnSquareIcon, Bars3Icon } from "@heroicons/react/24/solid"
 export const Header: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    const heroSection = document.getElementById("hero");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          document.querySelector("header")?.classList.add("text-white");
-          document.querySelector("header")?.classList.remove("text-black");
-        } else {
-          document.querySelector("header")?.classList.remove("text-white");
-          document.querySelector("header")?.classList.add("text-black");
-        }
-      },
-      { threshold: 0.05 },
-    );
-
-    if (heroSection) observer.observe(heroSection);
-
-    return () => {
-      if (heroSection) observer.unobserve(heroSection);
+    const programSection = document.getElementById("program");
+    if (!programSection) return;
+    // MEMO 스크롤에 따라 헤더 텍스트 색상 변경
+    const scrollListener = () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= programSection.offsetTop) {
+        document.querySelector("header")?.classList.add("text-black");
+        document.querySelector("header")?.classList.remove("text-white");
+      } else {
+        document.querySelector("header")?.classList.add("text-white");
+        document.querySelector("header")?.classList.remove("text-black");
+      }
     };
+    window.addEventListener("scroll", scrollListener);
+    return () => window.removeEventListener("scroll", scrollListener);
   }, []);
 
   const scrollToSection = (section: string) => () => {
@@ -38,7 +33,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className='w-full flex justify-center fixed top-0 z-10 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
+    <header className='w-full flex justify-center fixed top-0 z-50 bg-white bg-opacity-30 backdrop-blur-sm text-white'>
       <div className='max-w-[1440px] w-full h-14 flex justify-between items-center px-5'>
         <b className='cursor-pointer' onClick={scrollToSection("top")}>
           ACC SCD 2024
