@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Header } from "@/components";
-import { HeroSection, ProgramSection } from "@/containers";
+import { EventSection, HeroSection, LocationSection, ProgramSection } from "@/containers";
 
 export default function CommunityDay2024() {
   return (
@@ -10,6 +10,8 @@ export default function CommunityDay2024() {
       <HeroSection />
       <div className='max-w-[1440px] flex flex-col w-full'>
         <ProgramSection />
+        <LocationSection />
+        <EventSection />
       </div>
     </main>
   );

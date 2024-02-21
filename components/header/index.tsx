@@ -67,7 +67,9 @@ export const Header: React.FC = () => {
         </button>
         <button className='flex items-center gap-x-0.5 border border-gray-300 rounded-full py-1.5 px-3 max-md:hidden'>
           <ArrowTopRightOnSquareIcon className='w-3.5 h-3.5' />
-          <span className='text-xs'>발표 지원하기</span>
+          <a href='https://forms.gle/pxZ4nnxcbmoDbPsv9' target={"_blank"} className='text-xs'>
+            발표 지원하기
+          </a>
         </button>
       </div>
     </header>
