@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
 
+import { prefix } from "@/next.config";
+
 export const HeroSection: React.FC = () => {
   return (
     <div id='hero' className='w-screen flex relative'>
       <Image
-        src='/assets/images/object.png'
+        src={`${prefix}/assets/images/object.png`}
         alt='animation object'
         width={1920}
         height={1080}
@@ -13,7 +15,7 @@ export const HeroSection: React.FC = () => {
       />
       <Image
         priority
-        src={"/assets/images/background.png"}
+        src={`${prefix}/assets/images/background.png`}
         alt='background image'
         width={1920}
         height={1080}
@@ -21,7 +23,7 @@ export const HeroSection: React.FC = () => {
       />
       <Image
         priority
-        src={"/assets/images/typo.png"}
+        src={`${prefix}/assets/images/typo.png`}
         alt='typo'
         width={797}
         height={364}

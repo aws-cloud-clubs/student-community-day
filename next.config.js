@@ -1,14 +1,13 @@
 /** @type {import("next").NextConfig} */
-const BaseURL = "https://aws-cloud-clubs.github.io/student-community-day/";
+export const repository = "student-community-day";
+export const BaseURL = `https://aws-cloud-clubs.github.io/${repository}/`;
+export const prefix = process.env.NODE_ENV !== "production" ? "" : BaseURL;
 const nextConfig = {
   output: "export",
   distDir: "build",
   reactStrictMode: true,
-  assetPrefix: BaseURL,
-  images: {
-    loader: "imgix",
-    path: BaseURL,
-  },
+  trailingSlash: true,
+  assetPrefix: process.env.NODE_ENV !== "production" ? "" : `/${repository}/`,
   async redirects() {
     return [
       {

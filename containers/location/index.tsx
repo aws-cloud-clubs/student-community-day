@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
+import { prefix } from "@/next.config";
+
 export const LocationSection: React.FC = () => {
   return (
     <div
@@ -17,7 +19,7 @@ export const LocationSection: React.FC = () => {
           target='_blank'
           href='https://kko.to/DFNgReJc7O'
         >
-          <Image src={"/assets/icons/navigation-line.svg"} alt={"navigation"} width={16} height={16} />
+          <Image src={`${prefix}/assets/icons/navigation-line.svg`} alt={"navigation"} width={16} height={16} />
           <span>길찾기</span>
         </a>
       </div>

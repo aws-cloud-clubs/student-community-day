@@ -3,6 +3,7 @@ import React from "react";
 
 import { ProgramListItem } from "@/components";
 import { TRACK_1, TRACK_2 } from "@/data";
+import { prefix } from "@/next.config";
 
 export const ProgramSection: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ export const ProgramSection: React.FC = () => {
       <div className='text-center flex justify-center items-center flex-col gap-y-2.5'>
         <p className='font-bold text-5xl max-md:text-3xl'>프로그램</p>
         <p className='font-semibold text-lg max-md:text-md'>클클이와 함께 프로그램을 알아보아요</p>
-        <Image src='/assets/icons/goorm1.svg' alt='goorm1' width={155} height={146} className='mt-5 my-20' />
+        <Image src={`${prefix}/assets/icons/goorm1.svg`} alt='goorm1' width={155} height={146} className='mt-5 my-20' />
       </div>
       <b className='text-4xl max-md:text-2xl'>Track 1 : 아키텍처</b>
       <div className='flex flex-col gap-y-5 mb-20'>
