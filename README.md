@@ -8,7 +8,6 @@ URL : https://aws-cloud-clubs.github.io/student-community-day/
 - Node.js >= 18.17.0
 - Next.js 14.1 (App Route)
 - Tailwind CSS
-- AWS Amplify
 
 ### Structure
 - `app` - Next.js App Route
