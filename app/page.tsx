@@ -1,5 +1,5 @@
-import React from "react";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return <></>;
+export default async function Home() {
+  redirect("/2024");
 }
