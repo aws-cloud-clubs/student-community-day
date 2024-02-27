@@ -28,8 +28,7 @@ bun run dev
 ```
 
 ### CI/CD
-Main 브랜치에 푸시하면 자동으로 Amplify를 통해 배포됩니다.
-
+Main 브랜치에 푸시하시고 release tag 생성하면 github action을 통해 Github Page Deploy 됩니다.
 
 ### Maintainer
 - 윤창현 [yoon@changhyeon.net](mailto:yoon@changhyeon.net) ~~연락할 일 없길 기도합니다~~
