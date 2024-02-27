@@ -8,7 +8,7 @@ const nextConfig = {
   assetPrefix: BaseURL,
   images: {
     loader: "imgix",
-    path: [BaseURL],
+    path: BaseURL,
   },
   async redirects() {
     return [
