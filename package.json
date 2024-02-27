@@ -5,7 +5,7 @@
   "homepage": "https://aws-cloud-clubs.github.io/student-community-day",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
