@@ -11,6 +11,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: "pages"
@@ -22,6 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -44,13 +46,16 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
+
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -58,10 +63,13 @@ jobs:
           key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lockb') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.bun }}-bun-
+
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

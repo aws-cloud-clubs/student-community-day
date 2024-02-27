@@ -5,10 +5,9 @@
   "homepage": "https://aws-cloud-clubs.github.io/student-community-day",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && touch build/.nojekyll && gh-pages -d out --dotfiles",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
