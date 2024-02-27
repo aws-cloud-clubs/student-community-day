@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { prefix } from "@/next.config";
+import { prefix } from "@/constants";
 
 export const HeroSection: React.FC = () => {
   return (

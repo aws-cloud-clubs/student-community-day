@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 import { ProgramListItem } from "@/components";
+import { prefix } from "@/constants";
 import { TRACK_1, TRACK_2 } from "@/data";
-import { prefix } from "@/next.config";
 
 export const ProgramSection: React.FC = () => {
   return (

@@ -2,7 +2,7 @@
 ### Student Community Day Event Page
 > 이 레포는 Community Day Event를 위한 레포입니다.
  
-URL : https://main.d343t49ramvyri.amplifyapp.com 
+URL : https://aws-cloud-clubs.github.io/student-community-day/ 
 
 ### Architecture
 - Node.js >= 18.17.0
@@ -13,6 +13,7 @@ URL : https://main.d343t49ramvyri.amplifyapp.com
 ### Structure
 - `app` - Next.js App Route
 - `components` - 제곧내
+- `constants` - 상수 모음
 - `containers` - page < **container** < component
 - `data` - 각종 데이터들 하드코딩 모음 (추후 API로 변경 하면 좋음)
 - `types` - interface 모음
