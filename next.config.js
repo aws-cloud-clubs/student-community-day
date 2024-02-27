@@ -1,7 +1,6 @@
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  output: "export",
-  distDir: "build",
+  output: process.env.NODE_ENV !== "production" ? "standalone" : "export",
   reactStrictMode: true,
   trailingSlash: true,
   assetPrefix: process.env.NODE_ENV !== "production" ? "" : `/student-community-day/`,
