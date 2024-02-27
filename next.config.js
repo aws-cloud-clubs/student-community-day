@@ -1,12 +1,10 @@
 /** @type {import("next").NextConfig} */
-const { repository } = require("@/constants");
-
 const nextConfig = {
   output: "export",
   distDir: "build",
   reactStrictMode: true,
   trailingSlash: true,
-  assetPrefix: process.env.NODE_ENV !== "production" ? "" : `/${repository}/`,
+  assetPrefix: process.env.NODE_ENV !== "production" ? "" : `/student-community-day/`,
   async redirects() {
     return [
       {
