@@ -1,4 +1,4 @@
-## AWS Korea Cloud Club
+## AWS Cloud Club Korea
 ### Student Community Day Event Page
 > 이 레포는 Community Day Event를 위한 레포입니다.
  
