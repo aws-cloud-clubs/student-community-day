@@ -17,6 +17,7 @@ URL : https://main.d343t49ramvyri.amplifyapp.com
 - `data` - 각종 데이터들 하드코딩 모음 (추후 API로 변경 하면 좋음)
 - `types` - interface 모음
 - `utils` - 각종 유틸리티 함수 모음
+- `hooks` - 커스텀 훅 모음
 
 ### How to run
 > bun 사용을 권장합니다.

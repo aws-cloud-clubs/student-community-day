@@ -1,12 +1,14 @@
 {
   "name": "community-day-2024",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://aws-cloud-clubs.github.io/student-community-day",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
@@ -24,6 +26,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
