@@ -4,6 +4,9 @@ const nextConfig = {
   distDir: 'build',
   reactStrictMode: true,
   basePath: '/2024',
+  images: {
+    unoptimized: true,
+  },
   async redirects() {
     return [
       {
