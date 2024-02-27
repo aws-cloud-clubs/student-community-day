@@ -1,11 +1,14 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
+const BaseURL = "https://aws-cloud-clubs.github.io/student-community-day";
 const nextConfig = {
   output: "export",
   distDir: "build",
   reactStrictMode: true,
-  basePath: "/2024",
+  basePath: "/student-community-day",
+  assetPrefix: BaseURL,
   images: {
-    unoptimized: true,
+    loader: "imgix",
+    path: [BaseURL],
   },
   async redirects() {
     return [
