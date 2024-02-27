@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
+        <meta httpEquiv='refresh' content='0; url=/2024' />
         <link rel='apple-touch-icon' sizes='57x57' href={`${prefix}/icons/apple-icon-57x57.png`} />
         <link rel='apple-touch-icon' sizes='60x60' href={`${prefix}/icons/apple-icon-60x60.png`} />
         <link rel='apple-touch-icon' sizes='72x72' href={`${prefix}/icons/apple-icon-72x72.png`} />

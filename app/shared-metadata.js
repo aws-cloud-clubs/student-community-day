@@ -1,5 +1,7 @@
+import { prefix } from "@/constants";
+
 export const openGraphImage = {
-  images: ["./images/og-image.png"],
+  images: [`${prefix}/images/og-image.png`],
 };
 
 export const metadataTitle = "ACC Student Community Day 2024";
