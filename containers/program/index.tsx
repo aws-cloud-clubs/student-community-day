@@ -9,7 +9,7 @@ export const ProgramSection: React.FC = () => {
   return (
     <div
       id='program'
-      className='w-full h-full flex relative bg-white px-10 py-40 flex-col gap-y-10 max-md:py-10 max-md:gap-y-5'
+      className='w-full h-full flex relative bg-white px-20 py-40 flex-col gap-y-10 max-md:py-10 max-md:gap-y-5'
     >
       <div className='text-center flex justify-center items-center flex-col gap-y-2.5'>
         <p className='font-bold text-5xl max-md:text-3xl'>프로그램</p>

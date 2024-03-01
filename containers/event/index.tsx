@@ -7,7 +7,7 @@ export const EventSection: React.FC = () => {
   return (
     <div
       id='event'
-      className='w-full h-full flex relative bg-white px-10 py-40 flex-col max-md:py-20 max-md:gap-y-5 items-center'
+      className='w-full h-full flex relative bg-white px-20 py-40 flex-col max-md:py-20 max-md:gap-y-5 items-center'
     >
       <div className='flex flex-col items-center mb-96 max-md:mb-20'>
         <p className='text-[#494EBF] text-xl max-md:text-md font-bold mb-16 max-md:mb-10'>현장 이벤트</p>
