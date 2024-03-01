@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
 import { prefix } from "@/constants";
+import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 export const LocationSection: React.FC = () => {
   return (
@@ -23,14 +26,9 @@ export const LocationSection: React.FC = () => {
           <span>길찾기</span>
         </a>
       </div>
-      <div className='flex justify-center items-center'>
-        <a href='https://kko.to/DFNgReJc7O' target='_blank'>
-          <img
-            className='w-[504px] h-[310px] rounded-3xl '
-            src='https://map2.daum.net/map/mapservice?FORMAT=PNG&amp;SCALE=2.5&amp;MX=509203&amp;MY=1112253&amp;S=0&amp;IW=504&amp;IH=310&amp;LANG=0&amp;COORDSTM=WCONGNAMUL&amp;logo=kakao_logo'
-          />
-        </a>
-      </div>
+      <Map center={{ lat: 37.503, lng: 127.0416 }} className='rounded-xl w-96 h-52 max-md:w-[310px]' level={4}>
+        <MapMarker position={{ lat: 37.503, lng: 127.0416 }} />
+      </Map>
     </div>
   );
 };

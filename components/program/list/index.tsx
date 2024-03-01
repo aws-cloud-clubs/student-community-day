@@ -7,7 +7,7 @@ import { Program } from "@/types";
 
 export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, description, level, presenter }) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
-  useAnimation({ refs: itemRef, animationClassName: "animate-slideInFromLeft" });
+  // useAnimation({ refs: itemRef, animationClassName: "animate-slideInFromLeft" });
   return (
     <div
       className='w-full flex py-5 justify-between min-h-[150px] gap-x-20 max-md:flex-col max-md:gap-y-2'
