@@ -36,6 +36,7 @@ export default function RootLayout({
         <meta name='msapplication-TileColor' content='#ffffff' />
         <meta name='msapplication-TileImage' content={`${prefix}/icons/ms-icon-144x144.png`} />
         <meta name='theme-color' content='#ffffff' />
+        <Script src='https://developers.kakao.com/sdk/js/kakao.js' async />
         <Script
           src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAO_APP_KEY}&libraries=services,clusterer&autoload=false`}
           strategy='beforeInteractive'

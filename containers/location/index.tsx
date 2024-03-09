@@ -4,9 +4,28 @@ import Image from "next/image";
 import React from "react";
 
 import { prefix } from "@/constants";
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+
+declare global {
+  interface Window {
+    kakao: any;
+  }
+}
 
 export const LocationSection: React.FC = () => {
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    // window.kakao?.init(process.env.KAKAO_APP_KEY);
+    window.kakao.maps.load(() => {
+      // id가 'map'인 요소에 지도를 생성
+      const mapContainer = document.getElementById("map");
+      if (!mapContainer) return;
+      const mapOption = {
+        center: new window.kakao.maps.LatLng(37.503, 127.0416),
+        level: 4,
+      };
+      const map = new window.kakao.maps.Map(mapContainer, mapOption);
+    });
+  }, []);
   return (
     <div
       id='location'
@@ -26,9 +45,7 @@ export const LocationSection: React.FC = () => {
           <span>길찾기</span>
         </a>
       </div>
-      <Map center={{ lat: 37.503, lng: 127.0416 }} className='rounded-xl w-96 h-52 max-md:w-[310px]' level={4}>
-        <MapMarker position={{ lat: 37.503, lng: 127.0416 }} />
-      </Map>
+      <div id='map' className='rounded-xl w-96 h-52 max-md:w-[310px]' />
     </div>
   );
 };
