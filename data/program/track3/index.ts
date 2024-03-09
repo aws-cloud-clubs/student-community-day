@@ -4,7 +4,7 @@ export const TRACK_3: Program[] = [
   {
     startAt: "14:30",
     endAt: "15:10",
-    title: "ZAWS Code Series로 나만의 자동화 구성하기",
+    title: "AWS Code Series로 나만의 자동화 구성하기",
     topic: "Architecture",
     presenter: {
       name: "김수민",
