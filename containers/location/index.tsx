@@ -10,7 +10,7 @@ export const LocationSection: React.FC = () => {
   return (
     <div
       id='location'
-      className='w-full h-full min-h-screen flex items-center bg-white px-20 py-40 gap-y-10 max-md:py-10 max-md:gap-y-5 justify-center gap-x-20 max-md:flex-col'
+      className='w-full h-full min-h-screen flex items-center bg-white px-20 py-40 gap-y-10 max-md:py-10 max-md:gap-y-5 justify-center gap-x-20 max-md:flex-col max-md:px-10'
     >
       <div className='flex flex-col max-md:items-center max-md:gap-x-2.5'>
         <div className='flex flex-col max-md:mb-5'>

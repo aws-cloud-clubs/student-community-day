@@ -7,7 +7,7 @@ import { COMMON, TRACK_1, TRACK_2, TRACK_3 } from "@/data";
 
 export const ProgramSection: React.FC = () => {
   return (
-    <div id='program' className='w-full h-full flex relative bg-white px-20 py-40 flex-col'>
+    <div id='program' className='w-full h-full flex relative bg-white px-20 py-40 flex-col max-md:px-10'>
       <div className='text-center flex justify-center items-center flex-col mb-20'>
         <p className='font-extrabold text-xl text-indigo-700 max-md:text-3xl mb-3'>프로그램</p>
         <p className='font-semibold text-3xl max-md:text-md'>세션 타임테이블</p>
