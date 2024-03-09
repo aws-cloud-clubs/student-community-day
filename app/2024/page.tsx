@@ -12,8 +12,8 @@ export default function CommunityDay2024() {
       </div>
       <div className='w-screen bg-white z-10 flex justify-center'>
         <div className='max-w-[1440px] flex flex-col w-full z-10'>
-          <ProgramSection />
           <LocationSection />
+          <ProgramSection />
           <EventSection />
         </div>
       </div>
