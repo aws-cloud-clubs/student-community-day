@@ -25,11 +25,18 @@ export const EventSection: React.FC = () => {
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D]'>
           ACC SCD 2024에 참여하고, #SDC2024 태그와 함께 행사를 공유해주세요.
         </p>
+        <Image
+          src={`${prefix}/assets/images/pic-event.png`}
+          alt={"event"}
+          width={820}
+          height={367}
+          className='scale-75 max-md:scale-100 max-md:mb-5'
+        />
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-10'>
           추첨을 통해 n명에게 커피챗을 위한 커피를 드립니다.
         </p>
         <Image
-          src={`${prefix}/assets/images/coffee-coupon.png`}
+          src={`${prefix}/assets/images/coffee-event.png`}
           alt={"event"}
           width={820}
           height={367}
