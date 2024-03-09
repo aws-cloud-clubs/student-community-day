@@ -7,7 +7,7 @@ import { ArrowTopRightOnSquareIcon, Bars3Icon } from "@heroicons/react/24/solid"
 export const Header: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    const programSection = document.getElementById("program");
+    const programSection = document.getElementById("location");
     if (!programSection) return;
     // MEMO 스크롤에 따라 헤더 텍스트 색상 변경
     const scrollListener = () => {
@@ -47,13 +47,13 @@ export const Header: React.FC = () => {
         <nav className='max-md:hidden'>
           <ul className='flex space-x-10 text-md font-medium'>
             <li>
-              <a href='#program' onClick={scrollToSection("program")}>
-                발표/프로그램
+              <a href='#location' onClick={scrollToSection("location")}>
+                위치
               </a>
             </li>
             <li>
-              <a href='#location' onClick={scrollToSection("location")}>
-                위치
+              <a href='#program' onClick={scrollToSection("program")}>
+                발표/프로그램
               </a>
             </li>
             <li>
