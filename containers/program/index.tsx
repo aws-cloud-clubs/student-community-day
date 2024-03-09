@@ -9,9 +9,9 @@ export const ProgramSection: React.FC = () => {
   return (
     <div id='program' className='w-full h-full flex relative bg-white px-20 py-40 flex-col max-md:px-10'>
       <div className='text-center flex justify-center items-center flex-col mb-20'>
-        <p className='font-extrabold text-xl text-indigo-700 max-md:text-3xl mb-3'>프로그램</p>
-        <p className='font-semibold text-3xl max-md:text-md'>세션 타임테이블</p>
-        <p className='font-semibold text-lg text-neutral-400 max-md:text-md'>
+        <p className='text-[#494EBF] text-xl max-md:text-md font-bold mb-16 max-md:mb-10'>프로그램</p>
+        <p className='font-bold text-3xl mb-6 max-md:text-xl'>세션 타임테이블</p>
+        <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D]'>
           각 트랙만의 고유한 세션을 듣고, 함께 성장합니다.
         </p>
       </div>
