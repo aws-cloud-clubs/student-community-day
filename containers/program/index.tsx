@@ -20,6 +20,7 @@ export const ProgramSection: React.FC = () => {
           <ProgramListItem {...program} key={idx} />
         ))}
       </div>
+
       <div className='mb-20 flex flex-col'>
         <p className='text-indigo-700 text-xl font-extrabold mb-3.5'>Track 1.</p>
         <p className='text-3xl font-semibold mb-1'>서원</p>
@@ -30,6 +31,7 @@ export const ProgramSection: React.FC = () => {
           <ProgramListItem {...program} key={idx} />
         ))}
       </div>
+
       <div className='mb-20 flex flex-col'>
         <p className='text-indigo-700 text-xl font-extrabold mb-3.5'>Track 2.</p>
         <p className='text-3xl font-semibold mb-1'>집현전</p>
@@ -40,6 +42,7 @@ export const ProgramSection: React.FC = () => {
           <ProgramListItem {...program} key={idx} />
         ))}
       </div>
+
       <div className='mb-20 flex flex-col'>
         <p className='text-indigo-700 text-xl font-extrabold mb-3.5'>Track 3.</p>
         <p className='text-3xl font-semibold mb-1'>성균관</p>
@@ -50,6 +53,7 @@ export const ProgramSection: React.FC = () => {
           <ProgramListItem {...program} key={idx} />
         ))}
       </div>
+
       <div className='flex justify-center items-center'>
         <Image
           src={`${prefix}/assets/images/time-table.png`}

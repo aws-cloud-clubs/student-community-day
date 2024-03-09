@@ -50,12 +50,12 @@ export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, topi
           </div>
         )}
       </div>
-      <div className='flex flex-col w-2/6 max-md:w-full max-md:mb-2'>
+      <div className='flex flex-col w-1/6 max-md:w-full max-md:mb-2'>
         <p className='text-lg font-medium'>{presenter?.name}</p>
         <p className='text-lg font-bold'>{presenter?.affiliation}</p>
       </div>
       {topic && (
-        <div className='flex w-1/6 max-md:w-full max-md:hidden'>
+        <div className='flex w-1/6 max-md:w-full max-md:hidden pl-10'>
           <div
             className={`px-5 py-1.5 justify-center items-center rounded-2xl flex w-24 ${TOPIC[topic]?.backgroundColor}`}
           >

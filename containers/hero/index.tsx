@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
         alt='animation object'
         width={1920}
         height={1080}
-        className='absolute top-0 left-0 z-0 w-screen h-full z-1 animate-bounce object-cover'
+        className='absolute top-0 left-0 w-screen h-full z-10 animate-bounce object-cover'
       />
       <Image
         priority
