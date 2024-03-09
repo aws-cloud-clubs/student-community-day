@@ -32,8 +32,8 @@ export const TRACK_3: Program[] = [
     },
   },
   {
-    startAt: "16:40",
-    endAt: "17:20",
+    startAt: "17:10",
+    endAt: "17:30",
     title: `Terraform으로 AWS ECS 관리하기`,
     topic: "DevOps",
     presenter: {
