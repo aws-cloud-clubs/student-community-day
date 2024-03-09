@@ -15,7 +15,7 @@ export const LocationSection: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
     if (!window.kakao) return;
-    window.kakao.maps?.load(() => {
+    window.kakao?.maps?.load(() => {
       // id가 'map'인 요소에 지도를 생성
       const mapContainer = document.getElementById("map");
       if (!mapContainer) return;
