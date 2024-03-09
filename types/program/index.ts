@@ -4,10 +4,10 @@ export interface Presenter {
 }
 
 export interface Program {
-  startAt: string;
+  startAt?: string;
   endAt: string;
   title: string;
-  description: string;
-  presenter: Presenter;
-  level: "BASIC" | "INTERMEDIATE" | "ADVANCED";
+  // description?: string;
+  presenter?: Presenter;
+  topic?: "Career" | "Sponsor" | "Architecture" | "Serverless" | "DevOps" | "IaC";
 }

@@ -2,29 +2,60 @@
 
 import React from "react";
 
-import { useAnimation } from "@/hooks";
 import { Program } from "@/types";
 
-export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, description, level, presenter }) => {
-  const itemRef = React.useRef<HTMLDivElement>(null);
-  // useAnimation({ refs: itemRef, animationClassName: "animate-slideInFromLeft" });
+const TOPIC = {
+  Career: {
+    backgroundColor: "bg-lime-300",
+    label: "커리어",
+  },
+  Sponsor: {
+    backgroundColor: "bg-violet-400",
+    label: "스폰서",
+  },
+  Architecture: {
+    backgroundColor: "bg-orange-300",
+    label: "아키텍처",
+  },
+  Serverless: {
+    backgroundColor: "bg-yellow-300",
+    label: "서버리스",
+  },
+  DevOps: {
+    backgroundColor: "bg-blue-300",
+    label: "데브옵스",
+  },
+  IaC: {
+    backgroundColor: "bg-purple-400",
+    label: "IaC",
+  },
+};
+
+export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, topic, presenter }) => {
+  const time = `${startAt || ""} - ${endAt}`;
   return (
-    <div
-      className='w-full flex py-5 justify-between min-h-[150px] gap-x-20 max-md:flex-col max-md:gap-y-2'
-      ref={itemRef}
-    >
-      <div className='flex flex-col border-b border-b-gray-900 flex-1'>
-        <span className='text-xs font-medium'>{`${startAt} ~ ${endAt}`}</span>
-        <span className='text-lg font-bold'>{title}</span>
+    <div className='program-list-item w-full py-[60px] border-t border-t-black px-1.5 flex items-center max-md:flex-col max-md:items-start max-md:py-5'>
+      <div className='w-1/6 max-md:w-full max-md:mb-2'>
+        <span>{time.trim()}</span>
       </div>
-      <div className='flex flex-col text-sm w-[200px]'>
-        <span className='font-bold'>{presenter.name}</span>
-        <span className='font-medium'>{presenter.affiliation}</span>
+      <div className='w-3/6 max-md:w-full max-md:mb-5'>
+        <span className='text-2xl font-medium whitespace-pre-wrap max-md:text-lg max-md:whitespace-normal'>
+          {title}
+        </span>
       </div>
-      <div className='flex flex-col text-sm max-w-[300px]'>
-        <span className='capitalize font-bold'>{level.toLocaleLowerCase()}</span>
-        <span className='whitespace-pre-wrap'>{description}</span>
+      <div className='flex flex-col w-2/6 max-md:w-full max-md:mb-2'>
+        <p className='text-lg font-medium'>{presenter?.name}</p>
+        <p className='text-lg font-bold'>{presenter?.affiliation}</p>
       </div>
+      {topic && (
+        <div className='flex w-1/6 max-md:w-full'>
+          <div
+            className={`px-5 py-1.5 justify-center items-center rounded-2xl flex w-24 ${TOPIC[topic]?.backgroundColor}`}
+          >
+            <span className='font-bold text-base'>{TOPIC[topic]?.label}</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

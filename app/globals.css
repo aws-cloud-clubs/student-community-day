@@ -190,3 +190,9 @@ a {
 .animate-slideInFromBottom {
   animation: slideInFromBottom 1s ease-in-out;
 }
+
+
+.program-list-item:last-child {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
