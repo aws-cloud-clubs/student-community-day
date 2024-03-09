@@ -15,9 +15,16 @@ export const EventSection: React.FC = () => {
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D]'>
           ACC 행사에 참여하며 폴라로이드를 통해 즐거운 모습을 기록해봐요.
         </p>
-        <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-32'>
+        <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-10'>
           현장에 비치된 폴라로이드로 사진을 찍을 수 있어요.
         </p>
+        <Image
+          src={`${prefix}/assets/images/pic-event.png`}
+          alt={"event"}
+          width={820}
+          height={367}
+          className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px] mb-32'
+        />
       </div>
       <div className='flex flex-col items-center'>
         <p className='text-[#494EBF] text-xl max-md:text-md font-bold mb-16 max-md:mb-10'>후기 이벤트</p>
@@ -25,13 +32,6 @@ export const EventSection: React.FC = () => {
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D]'>
           ACC SCD 2024에 참여하고, #SDC2024 태그와 함께 행사를 공유해주세요.
         </p>
-        <Image
-          src={`${prefix}/assets/images/pic-event.png`}
-          alt={"event"}
-          width={820}
-          height={367}
-          className='scale-75 max-md:scale-100 max-md:mb-5'
-        />
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-10'>
           추첨을 통해 n명에게 커피챗을 위한 커피를 드립니다.
         </p>
@@ -40,9 +40,9 @@ export const EventSection: React.FC = () => {
           alt={"event"}
           width={820}
           height={367}
-          className='scale-75 max-md:scale-100 max-md:mb-5'
+          className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px]'
         />
-        <p className='font-semibold text-sm whitespace-pre-wrap text-center text-[#5B5B5D] max-md:text-xs'>
+        <p className='font-semibold text-sm whitespace-pre-wrap text-center text-[#5B5B5D] max-md:text-xs mb-32'>
           * 0월 0일까지 후기를 업로드해주신 분들을 대상으로, 0월00일 당첨자분들께 전달드릴 예정입니다.
         </p>
       </div>
