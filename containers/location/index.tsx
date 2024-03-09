@@ -15,15 +15,15 @@ export const LocationSection: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
     if (!window.kakao) return;
-    window.kakao?.maps?.load(() => {
+    window.kakao.maps?.load(() => {
       // id가 'map'인 요소에 지도를 생성
       const mapContainer = document.getElementById("map");
       if (!mapContainer) return;
       const mapOption = {
-        center: new window.kakao?.maps?.LatLng(37.503, 127.0416),
+        center: new window.kakao.maps.LatLng(37.503, 127.0416),
         level: 4,
       };
-      const map = new window.kakao?.maps?.Map(mapContainer, mapOption);
+      const map = new window.kakao.maps.Map(mapContainer, mapOption);
     });
   }, []);
   return (
