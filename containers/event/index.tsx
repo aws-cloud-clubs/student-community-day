@@ -30,7 +30,7 @@ export const EventSection: React.FC = () => {
         <p className='text-[#494EBF] text-xl max-md:text-md font-bold mb-16 max-md:mb-10'>후기 이벤트</p>
         <p className='font-bold text-3xl mb-6 max-md:text-xl'>후기를 널리 공유해주세요</p>
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D]'>
-          ACC SCD 2024에 참여하고, #SDC2024 태그와 함께 행사를 공유해주세요.
+          ACC SCD 2024에 참여하고, #ACCSCD2024 태그와 함께 행사를 공유해주세요.
         </p>
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-10'>
           추첨을 통해 n명에게 커피챗을 위한 커피를 드립니다.

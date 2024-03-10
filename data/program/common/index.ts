@@ -11,7 +11,7 @@ export const COMMON: Program[] = [
     title: "Keynote",
     presenter: {
       name: "김수빈",
-      affiliation: "당근",
+      affiliation: "ACC Regional Captain",
     },
   },
 ];
