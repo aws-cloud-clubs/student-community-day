@@ -20,7 +20,7 @@ export const EventSection: React.FC = () => {
         </p>
         <Image
           src={`${prefix}/assets/images/pic-event.png`}
-          alt={"event"}
+          alt={"pic-event"}
           width={820}
           height={367}
           className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px] mb-32'
@@ -37,7 +37,7 @@ export const EventSection: React.FC = () => {
         </p>
         <Image
           src={`${prefix}/assets/images/coffee-event.png`}
-          alt={"event"}
+          alt={"coffee-event"}
           width={820}
           height={367}
           className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px]'

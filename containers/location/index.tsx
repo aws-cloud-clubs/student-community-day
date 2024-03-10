@@ -14,17 +14,25 @@ declare global {
 export const LocationSection: React.FC = () => {
   React.useEffect(() => {
     if (typeof window === "undefined") return;
-    if (!window.kakao) return;
-    window.kakao?.maps?.load(() => {
-      // id가 'map'인 요소에 지도를 생성
-      const mapContainer = document.getElementById("map");
-      if (!mapContainer) return;
-      const mapOption = {
-        center: new window.kakao.maps.LatLng(37.503, 127.0416),
-        level: 4,
-      };
-      const map = new window.kakao.maps.Map(mapContainer, mapOption);
-    });
+    const KAKAO_APP_KEY = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
+    const kakaoMapScript = document.createElement("script");
+    kakaoMapScript.async = false;
+    kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_APP_KEY}&autoload=false`;
+    document.head.appendChild(kakaoMapScript);
+
+    const onLoadKakaoAPI = () => {
+      window.kakao.maps.load(() => {
+        const container = document.getElementById("map");
+        const options = {
+          center: new window.kakao.maps.LatLng(37.503, 127.0416),
+          level: 4,
+        };
+
+        const map = new window.kakao.maps.Map(container, options);
+      });
+    };
+
+    kakaoMapScript.addEventListener("load", onLoadKakaoAPI);
   }, []);
   return (
     <div

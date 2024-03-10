@@ -63,10 +63,7 @@ export const Header: React.FC = () => {
             </li>
           </ul>
         </nav>
-        <button className='md:hidden w-5 h-5'>
-          <Bars3Icon />
-        </button>
-        <button className='flex items-center gap-x-0.5 border border-gray-300 rounded-full py-1.5 px-3 max-md:hidden'>
+        <button className='flex items-center gap-x-0.5 border border-gray-300 rounded-full py-1.5 px-3'>
           <ArrowTopRightOnSquareIcon className='w-3.5 h-3.5' />
           <a href='https://festa.io/events/6Yn3VFpScLshPAjKcPFknU' target={"_blank"} className='text-xs'>
             티켓 구매하기

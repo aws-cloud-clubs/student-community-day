@@ -70,7 +70,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          KAKAO_APP_KEY: ${{ secrets.KAKAO_APP_KEY }}
+          NEXT_PUBLIC_KAKAO_APP_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_APP_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
