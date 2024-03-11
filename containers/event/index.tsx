@@ -43,7 +43,7 @@ export const EventSection: React.FC = () => {
           className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px]'
         />
         <p className='font-semibold text-sm whitespace-pre-wrap text-center text-[#5B5B5D] max-md:text-xs mb-32'>
-          * 0월 0일까지 후기를 업로드해주신 분들을 대상으로, 0월00일 당첨자분들께 전달드릴 예정입니다.
+          * 4월 13일까지 후기를 업로드해주신 분들을 대상으로, 4월 14일 당첨자분들께 전달드릴 예정입니다.
         </p>
       </div>
     </div>
