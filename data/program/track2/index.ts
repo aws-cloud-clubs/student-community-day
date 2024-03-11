@@ -28,7 +28,7 @@ export const TRACK_2: Program[] = [
     topic: "Architecture",
     presenter: {
       name: "김민태",
-      affiliation: "우아한형제들",
+      affiliation: "김민태",
     },
   },
   {
