@@ -15,7 +15,7 @@ export const TRACK_3: Program[] = [
     startAt: "15:20",
     endAt: "15:40",
     title: `ECS와 EKS, 다른그림 찾기`,
-    topic: "IaC",
+    topic: "DevOps",
     presenter: {
       name: "이해송",
       affiliation: "ACC CUK Captain",

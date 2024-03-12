@@ -25,10 +25,6 @@ const TOPIC = {
     backgroundColor: "bg-blue-300",
     label: "데브옵스",
   },
-  IaC: {
-    backgroundColor: "bg-purple-400",
-    label: "IaC",
-  },
 };
 
 export const ProgramListItem: React.FC<Program> = ({ startAt, endAt, title, topic, presenter }) => {
