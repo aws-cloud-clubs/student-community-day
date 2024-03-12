@@ -5,7 +5,7 @@ export const TRACK_3: Program[] = [
     startAt: "14:30",
     endAt: "15:10",
     title: "AWS Code Series로 나만의 자동화 구성하기",
-    topic: "Architecture",
+    topic: "DevOps",
     presenter: {
       name: "김수민",
       affiliation: "ACC KHU Captain",
