@@ -9,5 +9,5 @@ export interface Program {
   title: string;
   // description?: string;
   presenter?: Presenter;
-  topic?: "Career" | "Sponsor" | "Architecture" | "Serverless" | "DevOps" | "IaC";
+  topic?: "Career" | "Sponsor" | "Architecture" | "Serverless" | "DevOps";
 }

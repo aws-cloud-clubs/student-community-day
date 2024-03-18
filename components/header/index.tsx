@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
         </nav>
         <button className='flex items-center gap-x-0.5 border border-gray-300 rounded-full py-1.5 px-3'>
           <ArrowTopRightOnSquareIcon className='w-3.5 h-3.5' />
-          <a href='https://festa.io/events/6Yn3VFpScLshPAjKcPFknU' target={"_blank"} className='text-xs'>
+          <a href='https://festa.io/events/4828' target={"_blank"} className='text-xs'>
             티켓 구매하기
           </a>
         </button>

@@ -33,7 +33,7 @@ export const EventSection: React.FC = () => {
           ACC SCD 2024에 참여하고, #ACCSCD2024 태그와 함께 행사를 공유해주세요.
         </p>
         <p className='font-semibold text-xl max-md:text-sm whitespace-pre-wrap text-center text-[#5B5B5D] mb-10'>
-          추첨을 통해 n명에게 커피챗을 위한 커피를 드립니다.
+          추첨을 통해 5명에게 커피챗을 위한 커피를 드립니다.
         </p>
         <Image
           src={`${prefix}/assets/images/coffee-event.png`}
@@ -43,7 +43,7 @@ export const EventSection: React.FC = () => {
           className='scale-75 max-md:scale-100 max-md:mb-5 w-[500px]'
         />
         <p className='font-semibold text-sm whitespace-pre-wrap text-center text-[#5B5B5D] max-md:text-xs mb-32'>
-          * 0월 0일까지 후기를 업로드해주신 분들을 대상으로, 0월00일 당첨자분들께 전달드릴 예정입니다.
+          * 4월 13일까지 후기를 업로드해주신 분들을 대상으로, 4월 14일 당첨자분들께 전달드릴 예정입니다.
         </p>
       </div>
     </div>
