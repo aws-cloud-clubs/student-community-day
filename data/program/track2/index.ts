@@ -22,8 +22,8 @@ export const TRACK_2: Program[] = [
     },
   },
   {
-    startAt: "15:50",
-    endAt: "16:30",
+    startAt: "16:20",
+    endAt: "17:00",
     title: "아키텍처란 무엇인가 찍먹해보기",
     topic: "Architecture",
     presenter: {
@@ -32,8 +32,8 @@ export const TRACK_2: Program[] = [
     },
   },
   {
-    startAt: "16:40",
-    endAt: "17:20",
+    startAt: "17:10",
+    endAt: "17:50",
     title: `AI 스타트업의 서비스가 \nFull Serverless로 동작하는 이유`,
     topic: "Serverless",
     presenter: {

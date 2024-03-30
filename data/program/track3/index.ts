@@ -22,8 +22,8 @@ export const TRACK_3: Program[] = [
     },
   },
   {
-    startAt: "15:50",
-    endAt: "16:30",
+    startAt: "16:20",
+    endAt: "17:00",
     title: `Terraform을 통한 \n확장 가능한 3-Tier 아키텍처 구축과 CI/CD 구성`,
     topic: "DevOps",
     presenter: {
@@ -32,8 +32,8 @@ export const TRACK_3: Program[] = [
     },
   },
   {
-    startAt: "17:10",
-    endAt: "17:30",
+    startAt: "17:40",
+    endAt: "18:00",
     title: `Terraform으로 AWS ECS 관리하기`,
     topic: "DevOps",
     presenter: {

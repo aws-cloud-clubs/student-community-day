@@ -22,8 +22,8 @@ export const TRACK_1: Program[] = [
     },
   },
   {
-    startAt: "15:50",
-    endAt: "16:30",
+    startAt: "16:20",
+    endAt: "17:00",
     title: "전지적 신입 백엔드 시점",
     topic: "Career",
     presenter: {
@@ -32,8 +32,8 @@ export const TRACK_1: Program[] = [
     },
   },
   {
-    startAt: "16:40",
-    endAt: "17:00",
+    startAt: "17:10",
+    endAt: "17:30",
     title: "AWS와 함께하는 Notion API 살펴보기",
     topic: "Sponsor",
     presenter: {
@@ -42,8 +42,8 @@ export const TRACK_1: Program[] = [
     },
   },
   {
-    startAt: "17:10",
-    endAt: "17:30",
+    startAt: "17:40",
+    endAt: "18:00",
     title: "Cloud Native. 트랜드에는 이유가 있다.",
     topic: "Architecture",
     presenter: {
