@@ -85,7 +85,7 @@ export function MainLandingSection() {
       </div>
 
       {/* 지도 안내 박스는 주석 처리 유지 */}
-      <div className="mt-32 flex bg-[#eaf2fe] rounded-2xl shadow-xl p-8 gap-10 items-center min-w-[600px] max-w-5xl justify-center max-md:flex-col max-md:p-6">
+      <div className="mt-[60vh] flex bg-[#eaf2fe] rounded-2xl shadow-xl p-8 gap-10 items-center min-w-[600px] max-w-5xl justify-center max-md:flex-col max-md:p-6">
         
         {/* 지도 */}
         <div className="rounded-xl overflow-hidden w-[350px] h-[230px] max-md:w-full max-md:h-[200px]">
@@ -93,8 +93,8 @@ export function MainLandingSection() {
         </div>
 
         {/* 텍스트 + 버튼 */}
-        <div className="flex flex-col justify-center items-start gap-4 max-md:items-center text-center max-md:text-center">
-          <h2 className="text-2xl font-bold text-gray-900">5월 24일, 이곳에서 만나요</h2>
+        <div className="flex flex-col justify-center items-end gap-4 max-md:items-center text-center max-md:text-center">
+          <h2 className="text-2xl font-bold text-gray-900 text-right">5월 24일,<br/>이곳에서 만나요</h2>
           <p className="text-sm text-gray-400">* 대중교통 이용을 권장드려요</p>
           <a
             className="flex items-center justify-center gap-1 border border-gray-800 rounded-full px-4 py-2 text-sm font-semibold hover:bg-gray-100 transition"
